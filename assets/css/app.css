@@ -1,0 +1,179 @@
+@font-face{
+    font-family: "Europe-Underground";
+    src: url('EuropeUnderground_black.ttf'),
+}
+
+
+/*General Styles*/
+
+body{
+	font-family: "Europe Underground Black", "Abel", "Gill Sans";
+}
+
+a{
+	-webkit-transition: color 0.5s ease;
+    	-moz-transition: color 0.5s ease;
+    	-o-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+	color: #bbb;
+}
+
+a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+
+
+/*HEADER*/
+
+.header-logo
+{
+width: 220px;
+height: auto;
+margin: 20px auto 0px auto;
+}
+
+.navbar
+{
+	border: none;
+	background: none;
+	margin-bottom: 0px;
+}
+
+.collapse.navbar-collapse
+{
+	width: 545px;
+	margin:auto;
+}
+
+.navbar-default .navbar-nav>li>a
+{
+	font-size: 16px;
+}
+
+/*HOME PAGE*/
+
+.header-pic
+{
+	width: 100%;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.home-title{
+	margin:auto;
+}
+
+.btn-block
+{
+	background: rgba(32, 56, 90, 0.75);
+	border:none;
+	color: #fff;
+	position:relative;
+	margin-top: -44px;
+}
+
+hr{
+	width: 240px;
+	border: 1px solid #bbb;
+	margin-top: 10px;
+
+}
+
+.greywrap{
+	background-color: rgba(0,0,0, 0.05);
+}
+
+.row{
+	margin-bottom: 10px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.new-products 
+{
+	padding-top:20px;
+	margin-left: 0px;
+	margin-right: 0px;
+	font-weight: 100;
+}
+
+.blue-box
+{
+	color: #FFF;
+	background-color: #20385A;
+	width: 200px;
+	padding: 8px;
+}
+
+p.blue-box
+{
+	width: 85px;
+	padding: 4px;
+	padding-right: 10px;
+}
+
+
+.new-products h4
+{
+margin-top: 30px;
+text-align: right;
+}
+
+.home-instagram
+{
+	margin: 0px;
+}
+
+
+/*Woocommerce*/
+
+.sub-listing{
+	margin-top: 10px;
+}
+
+
+/*footer*/
+footer
+{
+	background-color: #20385A;
+	color:#fff;
+}
+
+footer p{
+	padding-top: 15px;
+	padding-bottom:10px;
+}
+
+#mc_embed_signup{
+	background:#20385A; 
+	clear:left; 
+	color: #999;
+}
+
+input.email
+{
+	min-width: 230px;
+}
+
+.social-icons
+{
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 100px;
+}
+
+.social-icons i
+{
+	font-size: 60px;
+	margin: 0px 20px;
+}
+
+.social-icons a
+{
+	color:#fff;
+}
