@@ -35,12 +35,31 @@ if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 
 if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
-<div class="col-sm-4 col-md-3" <?php post_class( $classes ); ?>>
+<div class="col-sm-4 col-md-3 product-listing" <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
 	<a href="<?php the_permalink(); ?>">
+		<div class="feed-img">
+			<div class="hover-text centered">
+				
+				<p><?php echo get_post_meta($post->ID,'stone',true) ?> <?php echo get_post_meta($post->ID,'jtype',true) ?> wrapped in <?php echo get_post_meta($post->ID,'wire_type',true) ?></p>
+				
+				<hr>
+					<?php
+					if ( $product->is_in_stock() ) {
+					$price = get_post_meta( get_the_ID(), '_regular_price', true);
+					echo '$'.$price;
+					}
+					else
+					{
+						echo "sold<br><a class='hover-custom' href=''>customize a similar piece</a>";
+					}
+					?>
 
+				
+		</div> <!-- hover text -->
+		</div>
 		<?php
 			/**
 			 * woocommerce_before_shop_loop_item_title hook
@@ -52,17 +71,17 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 		?>
 		<div class="row sub-listing">
 			<div class="col-xs-offset-2 col-xs-5">
-		<?php echo get_post_meta($post->ID,'stone',true) ?>
-		</div>
+		<p><?php echo get_post_meta($post->ID,'stone',true) ?></p>
+			</div>
 		<div class="col-xs-2">
 			<?php
 			if ( $product->is_in_stock() ) {
 			$price = get_post_meta( get_the_ID(), '_regular_price', true);
-			echo '$'.$price;
+			echo '<p>$'.$price.'</p>';
 			}
 			else
 			{
-				echo "sold";
+				echo "<p>sold</p>";
 			}
 			?>
 		</div>
@@ -79,6 +98,20 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
 	</a>
 
+
+
 	<?php /*do_action( 'woocommerce_after_shop_loop_item' );*/ ?>
 
 </div>
+
+	<?php
+			if (! $product->is_in_stock() ) {
+				echo "
+				<div class='row text-center mobile-custom-link' style='margin-top:-30px'>
+				<br>
+				<a class='hover-custom' href='custom'>
+				customize a piece
+				<a>
+				</div>";
+			}
+			?>

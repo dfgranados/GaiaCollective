@@ -5,19 +5,25 @@
 	</div>
 	</div>
 	<div class="row text-center">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 ">
-				<img class="home-pic-3 img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/moonbox.jpg" alt="">
-				<button class="btn-block"><h4>crystals every full moon</h4></button>
-				<br>
-			</div>
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4  col-sm-offset-0 ">
-				<img class="home-pic-3 img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/home-custom.jpg" alt="">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 home-pic-3">
+				<a href="index.php/custom">
+				<img class="img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/home-custom.jpg" alt="">
 				<button class="btn-block"><h4>get it custom</h4></button>
+				</a>
 				<br>
 			</div>
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0  ">
-				<img class="home-pic-3 img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/home-blog.jpg" alt="">
-				<button class="btn-block"><h4>latest from us</h4></button>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 home-pic-3">
+				<a href="index.php/moonbox">
+				<img class=" img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/moonbox.jpg" alt="">
+				<button class="btn-block"><h4>crystals every full moon</h4></button>
+				</a>
+				<br>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0  home-pic-3">
+				<a href="index.php/blog">
+				<img class="img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/home-lookbook.jpg" alt="">
+				<button class="btn-block"><h4>more from the lookbook</h4></button>
+				</a>
 				<br>
 			</div>
 		</div> <!-- row -->

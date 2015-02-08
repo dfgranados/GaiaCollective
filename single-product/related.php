@@ -32,6 +32,10 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 $products = new WP_Query( $args );
 
 $woocommerce_loop['columns'] = $columns;
+?>
+
+
+<?php
 
 if ( $products->have_posts() ) : ?>
 
@@ -54,3 +58,6 @@ if ( $products->have_posts() ) : ?>
 <?php endif;
 
 wp_reset_postdata();
+
+?>
+

@@ -13,10 +13,13 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
+<div class="container cont-space-above">
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-1">
+
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
-
 <table class="shop_table cart" cellspacing="0">
 	<thead>
 		<tr>
@@ -53,7 +56,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							if ( ! $_product->is_visible() )
 								echo $thumbnail;
 							else
-								printf( '<a href="%s">%s</a>', $_product->get_permalink(), $thumbnail );
+								printf( '<a href="%s" class="checkout-thumbnail">%s</a>', $_product->get_permalink(), $thumbnail );
 						?>
 					</td>
 
@@ -66,6 +69,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 							// Meta data
 							echo WC()->cart->get_item_data( $cart_item );
+
 
                				// Backorder notification
                				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) )
@@ -121,7 +125,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
+				<!-- update cart and Proceed to checkout button -->
+				<input type="submit" class="button update-cart-button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward single_add_to_cart_button" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
 
 				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 
@@ -136,7 +141,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 </form>
-
+</div> <!-- col-sm6 -->
+<div class="col-sm-5 col-sm-offset-1">
 <div class="cart-collaterals">
 
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
@@ -147,4 +153,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 </div>
 
+
+
+	</div> <!-- col-sm6 -->
+	</div> <!-- row -->
+</div> <!-- container -->
 <?php do_action( 'woocommerce_after_cart' ); ?>

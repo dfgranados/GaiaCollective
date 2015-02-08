@@ -1,4 +1,4 @@
-<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/header-logo.jpg" alt="" class="img-responsive header-logo">
+<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/header-banner.jpg" alt="" class="img-responsive header-logo"></a>
 
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">

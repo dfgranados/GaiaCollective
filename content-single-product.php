@@ -11,23 +11,35 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
+<div class="container cont-space-above">
+	<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1">
+	<div class="row">
+			<div class="col-sm-3 col-sm-offset-1 col-xs-12">
+		<div class="vcenter">
+		<p>stone:</p> <span class="prod-page-attributes"><?php echo get_post_meta($post->ID,'stone',true) ?></span><br>
+		<p>metal:</p> <span class="prod-page-attributes"><?php echo get_post_meta($post->ID,'wire_type',true) ?></span><br>
+		<p>made by:</p> <span class="prod-page-attributes"><?php echo get_post_meta($post->ID,'made_by',true) ?></span><br>
+		<p>size:</p> <span class="prod-page-attributes"><?php echo get_post_meta($post->ID,'size',true) ?></span><br>
+		<br>
+		</div>
+	</div> <!-- col-sm-4 -->
 
-<?php
+	<div class="col-sm-4">
+		<?php
 	/**
 	 * woocommerce_before_single_product hook
 	 *
 	 * @hooked wc_print_notices - 10
 	 */
-	 do_action( 'woocommerce_before_single_product' );
+	do_action( 'woocommerce_before_single_product' );
 
-	 if ( post_password_required() ) {
-	 	echo get_the_password_form();
-	 	return;
-	 }
-?>
-
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	if ( post_password_required() ) {
+		echo get_the_password_form();
+		return;
+	}
+	?>
+	<!-- product image -->
+	<div class="prod-image product-listing">
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
@@ -36,11 +48,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * @hooked woocommerce_show_product_images - 20
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
-	?>
+		?>
+	</div>
+	</div><!-- col-sm-4 -->
+	
+	<div class="col-sm-3 text-center">
+			<div class="summary entry-summary vcenter"> <!-- summary and checkout options -->
 
-	<div class="summary entry-summary">
-
-		<?php
+				<?php
 			/**
 			 * woocommerce_single_product_summary hook
 			 *
@@ -53,11 +68,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
 			do_action( 'woocommerce_single_product_summary' );
-		?>
+			?>
 
-	</div><!-- .summary -->
+		</div><!-- .summary -->
+		-
+		<br>
+		<a href="" class="hover-custom"> customize a similar piece</a>
+	</div><!-- col-sm-4 -->
+	
+	</div> <!-- row -->
+</div><!-- col-sm-8 col-sm-offset-2 -->
+</div> <!-- container -->
 
-	<?php
+	<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+		<?php
 		/**
 		 * woocommerce_after_single_product_summary hook
 		 *
@@ -65,11 +90,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
+		/*do_action( 'woocommerce_after_single_product_summary' );*/
+		?>
 
-	<meta itemprop="url" content="<?php the_permalink(); ?>" />
+		<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
-</div><!-- #product-<?php the_ID(); ?> -->
+	</div><!-- #product-<?php the_ID(); ?> -->
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+
+
+<?php /*do_action( 'woocommerce_after_single_product' );*/ ?>
+

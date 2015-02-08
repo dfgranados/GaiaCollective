@@ -9,6 +9,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
+
 <form id="order_review" method="post">
 
 	<table class="shop_table">
@@ -94,3 +95,5 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div>
 
 </form>
+
+

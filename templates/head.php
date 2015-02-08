@@ -11,3 +11,4 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
+<div class="wrapper"> <!-- closed on footer.php -->

@@ -45,7 +45,7 @@ function custom_pre_get_posts_query( $q ) {
     $q->set( 'tax_query', array(array(
       'taxonomy' => 'product_cat',
       'field' => 'slug',
-      'terms' => array( 'custom', 'glow' ), // Don't display products in the knives category on the shop page
+      'terms' => array( 'custom', 'glow', 'moonbox' ), // Don't display products in the knives category on the shop page
       'operator' => 'NOT IN'
     )));
   
@@ -57,3 +57,16 @@ function custom_pre_get_posts_query( $q ) {
 
 /*removes woocommerce breadcrumbs*/
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
+/*remove woocommerce stlying*/
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+/*adding custom jquery script to enqueue*/
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
+function add_my_script() {
+    wp_enqueue_script(
+        'customJquery', // name your script so that you can attach other scripts and de-register, etc.
+        get_stylesheet_directory_uri() . '/assets/js/custom.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
