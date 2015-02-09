@@ -13,32 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 ?>
-<?php 
-if( get_post_meta($post->ID,'product_template',true) == "moonbox")
-{
-include('single-product-moonbox.php');
-}
-else{
-?>
 
 <div class="container cont-space-above">
 	<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1">
 	<div class="row">
-			<div class="col-sm-3 col-sm-offset-1 col-xs-12">
+		<div class="col-sm-3 col-sm-offset-1 col-xs-12">
 		<div class="vcenter">
-		<p>stone:</p> <span class="prod-page-attributes">
+		<p>description:</p> <span class="prod-page-attributes">
 			<?php echo get_post_meta($post->ID,'stone',true) ?>
 		</span><br>
-		<p>metal:</p> <span class="prod-page-attributes">
-			<?php echo get_post_meta($post->ID,'wire_type',true) ?>
-		</span><br>
-		<p>made by:</p> <span class="prod-page-attributes">
-			<?php echo get_post_meta($post->ID,'made_by',true) ?>
-		</span><br>
-		<p>size:</p> <span class="prod-page-attributes">
-			<?php echo get_post_meta($post->ID,'size',true) ?>
-		</span><br>
-		<br>
 		</div>
 	</div> <!-- col-sm-4 -->
 
@@ -89,9 +72,9 @@ else{
 			?>
 
 		</div><!-- .summary -->
-		-
+		or
 		<br>
-		<a href="" class="hover-custom"> customize a similar piece</a>
+		<a href="" class="hover-custom">only sign up for moonbox updates</a>
 	</div><!-- col-sm-4 -->
 	
 	</div> <!-- row -->
@@ -118,4 +101,3 @@ else{
 
 
 <?php /*do_action( 'woocommerce_after_single_product' );*/ ?>
- <?php } ?>
