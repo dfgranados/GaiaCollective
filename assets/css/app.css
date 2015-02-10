@@ -51,7 +51,7 @@ html, body {
 
 .header-logo
 {
-width: 80%;
+width: 60%;
 height: auto;
 margin: 20px auto 10px auto;
 }
@@ -159,7 +159,7 @@ text-align: right;
 
 
 /*Woocommerce feed*/
-.product-conatiner
+.product-container
 {
 	margin-top: 51px;
 }
@@ -261,7 +261,7 @@ text-align: right;
 .prod-page-attributes
 {
 	color: black;
-	display: inline-block;
+	display: inline;
 }
 
 .prod-image
@@ -404,7 +404,7 @@ input.email
 @media screen and (max-width: 480px) {
 .social-icons
 {
-	margin-top: -20px;
+	margin-top: 0px;
 	margin-bottom: 20px;
 }
 }
@@ -446,14 +446,16 @@ input.email
 
 .btn-success
 {
-	background-color: rgba(195, 195, 195, 1);
+	background-color: white;
+	color: #888;
 	transition: background-color 0.2s ease;
-	border:none;
+	border: 2px solid #666;
 }
 
 .btn-success:hover
 {
 	background-color: #bbb;
+	border: 2px solid #bbb;
 }
 
 select
@@ -461,7 +463,7 @@ select
     padding:3px;
     margin: 0;
     background: #f8f8f8;
-    color:rgba(195, 195, 195, 1);
+    color:#888;
     border:none;
     display: inline-block;
     font-size: 16px;
@@ -565,4 +567,46 @@ td{
 	 list-style-type: none;
 }
 
+.payment_method_paypal>label>img
+{
+	display:none;
+}
 
+
+/*connect page*/
+
+.connect-form>input, .connect-form>textarea
+{
+	width: 100%;
+}
+
+.email-submit
+{
+	width: 25%;
+	margin: auto;
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.email-submit:hover
+{
+	color: #bbb;
+	border: 2px solid #bbb;
+}
+
+/*custom  page*/
+
+.custom-form>input, .custom-form>textarea, .custom-form>select
+{
+	width: 100%;
+}
+
+.custom-form
+{
+	text-align: left;
+}
+
+.custom-form>select
+{
+}

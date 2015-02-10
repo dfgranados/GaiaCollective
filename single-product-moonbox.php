@@ -19,9 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<div class="row">
 		<div class="col-sm-3 col-sm-offset-1 col-xs-12">
 		<div class="vcenter">
-		<p>description:</p> <span class="prod-page-attributes">
-			<?php echo get_post_meta($post->ID,'stone',true) ?>
-		</span><br>
+
+		 <p style="color: #aaa"><?php echo get_the_content() ?><p>
+		<br>
 		</div>
 	</div> <!-- col-sm-4 -->
 

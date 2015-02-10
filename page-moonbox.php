@@ -18,9 +18,12 @@
 					<h4>Artemis</h4>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/moonbox-page/example-box-set.jpg" alt="" class="img-responsive header-logo">
 				</span>
+				Includes: <br>
 				3 Crystals
 				<br>
-				
+				<br>
+				<br>
+				<br>
 				<select id="moonbox-dropdown1">
 
 					<?php
@@ -58,9 +61,12 @@
 					<h4>Juna</h4>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/moonbox-page/example-box-set.jpg" alt="" class="img-responsive header-logo">
 				</span>
+				Includes: <br>
 				3 crystals and 2 additional items 
 				<br>
-
+				<br>
+				<br>
+				<br>
 				<select id="moonbox-dropdown2">
 
 					<?php
@@ -97,7 +103,9 @@
 					<h4>Luna</h4>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/moonbox-page/example-box-set.jpg" alt="" class="img-responsive header-logo">
 				</span>
+				Includes: <br>
 				3 crystals and 3 additional items, including one sterling silver wire-wrap. 
+				<br>
 				<br>
 				<select id="moonbox-dropdown3">
 

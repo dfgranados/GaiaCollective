@@ -20,7 +20,7 @@
 				<br>
 			</div>
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0  home-pic-3">
-				<a href="index.php/blog">
+				<a href="index.php/lookbook">
 				<img class="img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/home-page/home-lookbook.jpg" alt="">
 				<button class="btn-block"><h4>more from the lookbook</h4></button>
 				</a>

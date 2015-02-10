@@ -11,6 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 if ( $order ) : ?>
 
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-3 checkout-column" style="padding: 20px;">
+
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 
 		<p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
@@ -65,3 +69,7 @@ if ( $order ) : ?>
 	<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>
+
+		</div> <!-- col -->
+	</div> <!-- row -->
+</div> <!-- container -->
